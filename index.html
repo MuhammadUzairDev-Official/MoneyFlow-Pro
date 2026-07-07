@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoneyFlow Pro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>💰 MoneyFlow Pro</h1>
+
+        <button id="themeBtn">🌙</button>
+
+    </header>
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card balance">
+
+            <h3>Total Balance</h3>
+
+            <h2 id="balance">$0.00</h2>
+
+        </div>
+
+        <div class="card income">
+
+            <h3>Total Income</h3>
+
+            <h2 id="income">$0.00</h2>
+
+        </div>
+
+        <div class="card expense">
+
+            <h3>Total Expense</h3>
+
+            <h2 id="expense">$0.00</h2>
+
+        </div>
+
+    </section>
+
+    <!-- Add Transaction -->
+
+    <section class="form-section">
+
+        <h2>Add Transaction</h2>
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Transaction Title"
+                required>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required>
+
+            <select id="category">
+
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Shopping</option>
+                <option>Entertainment</option>
+                <option>Bills</option>
+                <option>Health</option>
+                <option>Education</option>
+                <option>Salary</option>
+                <option>Other</option>
+
+            </select>
+
+            <select id="type">
+
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+
+            </select>
+
+            <input
+                type="date"
+                id="date"
+                required>
+
+            <button type="submit">
+
+                Add Transaction
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search Transaction">
+
+    </section>
+
+    <!-- Transaction History -->
+
+    <section class="history">
+
+        <h2>Transaction History</h2>
+
+        <ul id="transactionList"></ul>
+
+    </section>
+
+    <!-- Expense Analytics -->
+
+    <section class="history">
+
+        <h2>Expense Analytics</h2>
+
+        <canvas id="expenseChart"></canvas>
+
+    </section>
+
+    <!-- Export CSV -->
+
+    <section class="export-section">
+
+        <button
+            class="export-btn"
+            onclick="exportCSV()">
+
+            📄 Export CSV
+
+        </button>
+
+    </section>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- JavaScript -->
+
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
